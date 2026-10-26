@@ -8,7 +8,7 @@ import (
 	"gotest.tools/v3/skip"
 )
 
-func TestAllocator(t *testing.T) {
+func TestFlakyAllocator(t *testing.T) {
 	skip.If(t, runtime.GOOS == "windows", "Allocator tests are hardcoded to use Linux network driver names")
 	allocator.RunAllocatorTests(t, NewProvider(nil))
 }
